@@ -1,0 +1,11 @@
+<button (click)="cambia()">Cambia</button>
+{{v1}}
+<br>
+<app-search-box [criterio]="v1+'123*'" (onSearch)="trova1($event)"></app-search-box>
+<hr>
+<app-search-box criterio="t2#" (onSearch)="trova2($event)"></app-search-box>
+<hr>
+<input type="number" [(ngModel)]="passo">
+{{valore}}
+<app-contatore etichetta="Add 2" [step]="passo" [totale]="valore"
+(cambiato)="aggiornaValore($event)"></app-contatore>
